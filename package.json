@@ -2,11 +2,11 @@
   "name": "dragdrop",
   "version": "1.0.0",
   "description": "dragdrop",
-  "main": "app.js",
+  "main": "bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server",
-    "build": "tsc"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",

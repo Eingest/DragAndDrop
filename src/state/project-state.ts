@@ -1,4 +1,4 @@
-import { Project, ProjectStatus } from "../models/project.js";
+import { Project, ProjectStatus } from "../models/project";
 
 // <T> is a placeholder for inherited classes etc...
 // !!!!! REMEMBER: inheritance and generics always a good way to make nicer code!!!!!
