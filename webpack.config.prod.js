@@ -1,14 +1,14 @@
 // exporting things in a node.js environment:
-// const HtmlWebpackPlugin = require("html-webpack-plugin");
+//const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanPlugin = require("clean-webpack-plugin")
 const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/app.ts",
   output: {
     filename: "bundle.js", // bundle.[contenthash].js
     path: path.resolve(__dirname, "dist"),
-    publicPath: "dist",
   },
   //   devServer: {
   //     contentBase: path.resolve(__dirname, "dist"),
@@ -17,7 +17,7 @@ module.exports = {
 
   // tell webpack there will be generated source maps:
   // => extracts and bundles it up correctly
-  devtool: "inline-source-map",
+  devtool: "none",
   // tell webpack how to work with the file:
   module: {
     rules: [
@@ -37,7 +37,9 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".js"],
   },
-  //plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+      new CleanPlugin.CleanWebpackPlugin()
+  ],
 };
 
 // IMPORTANT!!!
